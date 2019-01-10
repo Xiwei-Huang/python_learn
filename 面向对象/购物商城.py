@@ -176,7 +176,7 @@ while tag:
 
 if tag == False:
     sum = 0
-    print('您购买了{},一共{}元'.format(,sum))
+    print('您购买了{},一共{}元'.format(choice4,sum))
 
     item_name = []
     item_price = []
@@ -185,3 +185,9 @@ if tag == False:
     for i in range(len(item_price)):
         sum += item_price[i] * item_num[i]
     print(sum)
+    
+    if sum <= income:
+        print('支付成功，你的余额是{}'.format(income-sum))
+    else:
+        print('支付失败，返回按1，退出按0')
+        
